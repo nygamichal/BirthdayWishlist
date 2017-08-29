@@ -17,7 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WishAddActivity"></activity>
+        <activity android:name=".WishAddActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>
