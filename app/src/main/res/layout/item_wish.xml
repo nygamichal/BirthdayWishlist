@@ -4,6 +4,9 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:elevation="2dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground
+"
     app:cardUseCompatPadding="true"
     >
     <RelativeLayout
