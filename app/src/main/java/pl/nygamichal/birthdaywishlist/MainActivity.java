@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setHasFixedSize(true);//nie zmienia dynamicnzie swojej wysokosci
-        adapterWishes = new AdapterWishes(new ArrayList<Wish>());
+        adapterWishes = new AdapterWishes(new ArrayList<Wish>(), realm);
         recyclerView.setAdapter(adapterWishes);
     }
 
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         RealmResults<Wish> wishes = realm.where(Wish.class).findAll();
         if (wishes!= null && wishes.size()>0)
         {
-            for (Wish wish :wishes)    //przechodzimy po petli biorac kady element tej listy
+            for (Wish wish :wishes)//przechodzimy po petli biorac kady element tej listy
             {
                 if (!adapterWishes.wishes.contains(wish)){
                     adapterWishes.wishes.add(wish);

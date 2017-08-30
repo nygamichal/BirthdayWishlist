@@ -25,12 +25,9 @@ import pl.aprilapps.easyphotopicker.DefaultCallback;
 import pl.aprilapps.easyphotopicker.EasyImage;
 
 public class WishAddActivity extends AppCompatActivity {
-    @BindView(R.id.editTextContent)
-    EditText editTextContent;
-    @BindView(R.id.editTextPerson)
-    EditText editTextPerson;
-    @BindView(R.id.imageView)
-    ImageView imageView;
+    @BindView(R.id.editTextContent) EditText editTextContent;
+    @BindView(R.id.editTextPerson) EditText editTextPerson;
+    @BindView(R.id.imageView) ImageView imageView;
 
     private Wish wish;
     private Realm realm;
@@ -61,7 +58,9 @@ public class WishAddActivity extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(WishAddActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED)
         {
             ActivityCompat.requestPermissions(WishAddActivity.this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},123);
-        }else {
+        }
+        else
+        {
             EasyImage.openChooserWithDocuments(WishAddActivity.this, "Select source", 0);//wybor galerii, zdjecia, itp
         }
     }

@@ -5,8 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:elevation="2dp"
     android:clickable="true"
-    android:foreground="?android:attr/selectableItemBackground
-"
+    android:foreground="?android:attr/selectableItemBackground"
+android:id="@+id/cardView"
     app:cardUseCompatPadding="true"
     >
     <RelativeLayout
